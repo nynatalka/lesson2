@@ -15,7 +15,7 @@ class Fibonacci {
     }
 
     public static void main(String args[]) {
-        int count = 10;
+        int count = -5;
         if (count <= 0) {
             System.out.print("Please enter value greater than 0");
         } else {
@@ -29,3 +29,5 @@ class Fibonacci {
 
     }
 }
+
+
