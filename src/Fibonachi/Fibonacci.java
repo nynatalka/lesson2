@@ -1,31 +1,31 @@
 package Fibonachi;
 
-class Fibonacci {
+public class Fibonacci {
 
-    static int n1 = 0, n2 = 1, n3 = 0;
+	static void printFibonacci(int count) {
+		if (count <= 0) {
+			System.out.print("Please enter value greater than 0");
+		} else {
+			int[] n = new int[count];
+			n[0] = 0;
+			if (count > 1) {
+				n[1] = 1;
+				for (int i = 2; i < count; i++) {
+					n[i] = n[i - 1] + n[i - 2];
+				}
+			}
+			for (int i = 0; i < count; i++)
+				System.out.print(n[i] + " ");
 
-    static void printFibonacci(int count) {
-        if (count > 0) {
-            n3 = n1 + n2;
-            n1 = n2;
-            n2 = n3;
-            System.out.print(" " + n3);
-            printFibonacci(count - 1);
-        }
-    }
+		}
 
-    public static void main(String args[]) {
-        int count = 10;
-        if (count <= 0) {
-            System.out.print("Please enter value greater than 0");
-        } else {
-            if (count == 1)
-                System.out.print(n1);
-            else {
-                System.out.print(n1 + " " + n2);
-                printFibonacci(count - 2);
-            }
-        }
+	}
 
-    }
+	public static void main(String args[]) {
+		int count = 3;
+
+		printFibonacci(count);
+
+	}
+
 }
